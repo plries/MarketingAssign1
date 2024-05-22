@@ -1,0 +1,37 @@
+html {
+    font-family: 'Inter', Helvetical, sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: black;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.card-container {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    background-color: white;
+    flex: 1;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-details > a {
+    flex: 1;
+}
