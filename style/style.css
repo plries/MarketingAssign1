@@ -8,6 +8,7 @@ html {
 
 body {
     background-color: #1C1C1C;
+    color: #1C1C1C;
     font-size: 1.6rem;
     max-width: 1024px;
     margin: 2rem;
@@ -39,7 +40,14 @@ body {
     background-color: white;
     flex: 1;
     align-self: flex-end;
-    height: 400px;
+    min-height: 400px;
+    transition: scale 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+
+.card:hover {
+    scale: 1.025;
+    box-shadow: 0px 0px 44px -16px rgba(36, 98, 160, 1);
+    z-index: 1000;
 }
 
 .card-image > iframe, .card-image > img {
@@ -56,7 +64,7 @@ body {
 
 .card-text > h4 {
     margin-top: 1rem;
-    margin-bottom: 0;
+    margin-bottom: 0.2rem;
     font-weight: 900;
     font-size: 2rem;
 }
@@ -82,7 +90,7 @@ body {
     margin-right: auto;
     font-size: 1.4rem;
     font-weight: 500;
-    color: slategray;
+    color: rgb(36, 98, 160);
     text-decoration: none;
     text-wrap: nowrap;    
 }
@@ -90,6 +98,18 @@ body {
 .card-details > svg {
     cursor: pointer;
     padding: 1rem 1rem 0 1rem;
+}
+
+.card-details > svg > path {
+    transition: fill 0.25s ease-in-out;
+}
+
+.card-details > .stop > path:hover {
+    fill: rgb(172, 28, 28);
+}
+
+.card-details > .player > path:hover {
+    fill: rgb(15, 112, 36);
 }
 
 .card-details > svg:last-child {
@@ -130,11 +150,11 @@ body {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr;
         overflow-y: hidden;
-        margin: 1rem 0 0 0;
     }
 
     .card {
         width: 74.5vw;
+        margin: 2rem 0;
         gap: 0;
     }
 
