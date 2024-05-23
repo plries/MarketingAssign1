@@ -18,14 +18,13 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 4.8rem;
+    font-size: 3.2rem;
     text-align: center;
     text-wrap: nowrap;
-    margin: 0;
+    margin: 0 0 2rem 0;
 }
 
 .card-container {
-    margin: 1rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -98,10 +97,6 @@ body {
 }
 
 @media screen and (max-width: 780px) {
-
-    .title-container > h1 {
-        font-size: 3.6rem;
-    }
     
     .card-container {
         grid-template-columns: repeat(2, 1fr);
