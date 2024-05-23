@@ -1,16 +1,30 @@
 html {
-    font-family: 'Inter', Helvetical, sans-serif;
+    font-family: 'Inter', Helvetica, sans-serif;
     font-size: 62.5%;
 }
 
 body {
-    background-color: black;
+    background-color: #1C1C1C;
     font-size: 1.6rem;
-    padding: 1rem;
+    padding: 2rem;
+}
+
+.title-container {
+    max-width: 100%;
+}
+
+.title-container > h1 {
+    background: -webkit-linear-gradient(white, #1C1C1C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 10.5vw;
+    text-align: center;
+    text-wrap: nowrap;
+    margin: 0;
 }
 
 .card-container {
-    margin: 1rem;
+    margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -22,9 +36,40 @@ body {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    gap: 1rem;
     background-color: white;
     flex: 1;
+    align-self: flex-end;
+    height: 400px;
+}
+
+.card-image > iframe, .card-image > img {
+    border-radius: 1rem;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-position: top;
+    object-fit: cover;
+}
+
+.card-text {
+    flex: 1;
+}
+
+.card-text > h4 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.card-text > h5 {
+    margin: 0;
+    color: gray;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.card-text > p {
+    font-size: 1.4rem;
 }
 
 .card-details {
@@ -33,5 +78,63 @@ body {
 }
 
 .card-details > a {
-    flex: 1;
+    margin-right: auto;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: slategray;
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+.card-details > svg {
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.card-details > svg:last-child {
+    margin-left: 0.25rem;
+    scale: 0.9;
+}
+
+@media screen and (max-width: 780px) {
+    
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+    body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .title-container > h1 {
+        font-size: 9.8vw;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        overflow-y: hidden;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .card {
+        width: 74.5vw;
+        height: 74.5vh;
+        gap: 0;
+    }
+
+    .card:first-child {
+        margin-left: 2rem;
+    }
+
+    .card:last-child {
+        margin-right: 2rem;
+    }
+
 }
