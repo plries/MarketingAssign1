@@ -40,13 +40,12 @@ ul {
 li {
     list-style: none;
     width: fit-content;
-}
-
-li > a {
-    text-decoration: none;
-    font-weight: 600;
-    color: #1c1c1c;
-    transition: all 0.25s ease-out;
+    a {
+        text-decoration: none;
+        font-weight: 600;
+        color: #1c1c1c;
+        transition: all 0.25s ease-out;
+    }
 }
 
 li > a:hover {
@@ -55,41 +54,57 @@ li > a:hover {
 
 .intro {
     margin: 6rem 0 2rem 0;
+    h2 {
+        color: #dfdfdf;
+        font-weight: 600;
+        margin: 0;
+    }
+    p {
+        line-height: 2rem;
+        color: #b3b3b3;
+        a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #d87fcc;
+        }
+    }
 }
 
-.intro > p {
-    line-height: 2rem;
-    color: #b3b3b3;
-}
-
-.intro > p > a {
-    text-decoration: none;
-    font-weight: 600;
-    color: #d87fcc;
+.conclusion {
+    margin: 2rem 0 6rem 0;
+    h2 {
+        color: #dfdfdf;
+        font-weight: 600;
+        margin: 0;
+    }
+    p {
+        line-height: 2rem;
+        color: #b3b3b3;
+    }
 }
 
 .title-container {
-    margin: 2rem 0;
-}
-
-.title-container > h1 {
-    color: white;
+    h1 {
+    background: -webkit-linear-gradient(white, #d87fcc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 3.2rem;
     text-wrap: nowrap;
     margin: 0;
-}
-
-.title-container > h2 {
-    color: #b3b3b3;
-    font-weight: 600;
-    margin: 0;
+    text-wrap: wrap;
+    }
+    h2 {
+        color: #dfdfdf;
+        font-weight: 600;
+        margin: 0;
+    }
 }
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin-bottom: 8rem;
 }
 
 .card {
@@ -102,71 +117,67 @@ li > a:hover {
     align-self: flex-end;
     min-height: 650px;
     transition: all 0.25s ease-out;
-    filter: saturate(0);
+    img {
+        transition: all 0.25s ease-out;
+        filter: saturate(0);
+        border-radius: 1rem;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
 }
 
 .card:hover {
     scale: 1.025;
-    filter: saturate();
     z-index: 1000;
-}
-
-.card-image > img {
-    border-radius: 1rem;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+    img {
+        filter: saturate();
+    }
 }
 
 .card-text {
     flex: 1;
     color: #b3b3b3;
-}
-
-.card-text > h3 {
-    color: white;
-    margin-top: 1rem;
-    margin-bottom: 0.2rem;
-    font-weight: 800;
-    font-size: 2rem;
-}
-
-.card-text > h4 {
-    margin: 0;
-    color: #b3b3b3;
-    font-weight: 400;
-    font-size: 1.6rem;
-}
-
-.card-text > p {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-}
-
-.card-text > p > a {
-    text-decoration: none;
-    font-weight: 600;
-    color: #d87fcc;
-}
-
-.card-text > p > strong {
-    font-weight: 400;
-    color: white;
+    h3 {
+        color: white;
+        margin-top: 1rem;
+        margin-bottom: 0.2rem;
+        font-weight: 800;
+        font-size: 2rem;
+    }
+    h4 {
+        margin: 0;
+        color: #b3b3b3;
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+    p {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #d87fcc;
+        }
+        strong {
+            font-weight: 400;
+            color: white;
+        }
+    }
 }
 
 .card-details {
     display: flex;
     flex-direction: row;
     align-items: end;
-}
-
-.card-details > a {
-    margin-left: auto;
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: #d87fcc;
-    text-decoration: none;
-    text-wrap: nowrap;    
+    a {
+        margin-left: auto;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: #d87fcc;
+        text-decoration: none;
+        text-wrap: nowrap;    
+    }
 }
 
 footer {
@@ -178,18 +189,16 @@ footer {
     padding: 2rem;
     margin-bottom: -2rem;
     border-radius: 2rem 2rem 0 0;
-}
-
-footer > p {
-    color: #d87fcc;
-    font-weight: 800;
-}
-
-.social-media {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
+    p {
+        color: #d87fcc;
+        font-weight: 800;
+    }
+    .social-media {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -209,6 +218,13 @@ footer > p {
         justify-content: baseline;
     }
     
+    .intro {
+        margin-bottom: 0;
+        p {
+            margin-bottom: 0;
+        }
+    }
+
     .title-container > h1 {
         font-size: 2.4rem;
         margin: 0;
@@ -219,21 +235,17 @@ footer > p {
       }
 
     .card-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
         overflow-y: hidden;
         margin: 0 -2rem;
     }
 
     .card {
-        width: 74.5vw;
+        width: 70vw;
+        min-height: 750px;
         gap: 0;
         margin: 2rem 0;
-    }
-
-    .intro,
-    .intro > p {
-        margin-bottom: 0;
     }
 
     .card:first-child {
