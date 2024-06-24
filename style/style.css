@@ -7,29 +7,84 @@ html {
 }
 
 body {
-    background-color: #1C1C1C;
-    color: #1C1C1C;
+    background-color: #1c1c1c;
     font-size: 1.6rem;
-    max-width: 1024px;
+    max-width: 1440px;
     margin: 2rem;
 }
 
+header {
+    max-width: 1440px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    width: fit-content;
+}
+
+li > a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #1c1c1c;
+    transition: all 0.25s ease-out;
+}
+
+li > a:hover {
+    color: #d87fcc;
+}
+
+.intro {
+    margin: 6rem 0 2rem 0;
+}
+
+.intro > p {
+    line-height: 2rem;
+    color: #b3b3b3;
+}
+
+.intro > p > a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #d87fcc;
+}
+
+.title-container {
+    margin: 2rem 0;
+}
+
 .title-container > h1 {
-    background: -webkit-linear-gradient(white, #1C1C1C);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white;
     font-size: 3.2rem;
-    text-align: center;
     text-wrap: nowrap;
-    margin: 0 0 2rem 0;
+    margin: 0;
+}
+
+.title-container > h2 {
+    color: #b3b3b3;
+    font-weight: 600;
+    margin: 0;
 }
 
 .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
+    margin-bottom: 8rem;
 }
 
 .card {
@@ -37,47 +92,61 @@ body {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    background-color: white;
+    background-color: #222222;
     flex: 1;
     align-self: flex-end;
-    min-height: 400px;
-    transition: scale 0.25s ease-out, box-shadow 0.25s ease-out;
+    min-height: 650px;
+    transition: all 0.25s ease-out;
+    filter: saturate(0);
 }
 
 .card:hover {
     scale: 1.025;
-    box-shadow: 0px 0px 44px -16px rgba(36, 98, 160, 1);
+    filter: saturate();
     z-index: 1000;
 }
 
-.card-image > iframe, .card-image > img {
+.card-image > img {
     border-radius: 1rem;
     width: 100%;
     aspect-ratio: 16 / 9;
-    object-position: top;
     object-fit: cover;
 }
 
 .card-text {
     flex: 1;
+    color: #b3b3b3;
 }
 
-.card-text > h4 {
+.card-text > h3 {
+    color: white;
     margin-top: 1rem;
     margin-bottom: 0.2rem;
-    font-weight: 900;
+    font-weight: 800;
     font-size: 2rem;
 }
 
-.card-text > h5 {
+.card-text > h4 {
     margin: 0;
-    color: gray;
+    color: #b3b3b3;
     font-weight: 400;
     font-size: 1.6rem;
 }
 
 .card-text > p {
     font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+
+.card-text > p > a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #d87fcc;
+}
+
+.card-text > p > strong {
+    font-weight: 400;
+    color: white;
 }
 
 .card-details {
@@ -87,39 +156,19 @@ body {
 }
 
 .card-details > a {
-    margin-right: auto;
+    margin-left: auto;
     font-size: 1.4rem;
     font-weight: 500;
-    color: rgb(36, 98, 160);
+    color: #d87fcc;
     text-decoration: none;
     text-wrap: nowrap;    
 }
 
-.card-details > svg {
-    cursor: pointer;
-    padding: 1rem 1rem 0 1rem;
-}
-
-.card-details > svg > path {
-    transition: fill 0.25s ease-in-out;
-}
-
-.card-details > .stop > path:hover {
-    fill: rgb(172, 28, 28);
-}
-
-.card-details > .player > path:hover {
-    fill: rgb(15, 112, 36);
-}
-
-.card-details > svg:last-child {
-    scale: 0.9;
-}
-
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1024px) {
     
     .card-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        gap: 2rem
     }
 
 }
@@ -130,11 +179,6 @@ body {
         display: block;
         align-items: baseline;
         justify-content: baseline;
-    }
-
-    body {
-        padding: 10rem 0;
-        margin: 0;
     }
     
     .title-container > h1 {
@@ -147,22 +191,28 @@ body {
       }
 
     .card-container {
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
         overflow-y: hidden;
+        margin: 0 -2rem;
     }
 
     .card {
         width: 74.5vw;
-        margin: 2rem 0;
         gap: 0;
+        margin: 2rem 0;
+    }
+
+    .intro,
+    .intro > p {
+        margin-bottom: 0;
     }
 
     .card:first-child {
         margin-left: 2rem;
     }
 
-    .card:last-child {
+    .card:last-of-type {
         margin-right: 2rem;
     }
 
