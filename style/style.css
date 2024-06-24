@@ -9,19 +9,24 @@ html {
 body {
     background-color: #1c1c1c;
     font-size: 1.6rem;
-    max-width: 1440px;
-    margin: 2rem;
 }
 
 header {
     max-width: 1440px;
     background-color: white;
+    color: #1a1a1a;;
     padding: 2rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 2rem 2rem 0 2rem;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 2rem;
 }
 
 ul {
@@ -162,6 +167,29 @@ li > a:hover {
     color: #d87fcc;
     text-decoration: none;
     text-wrap: nowrap;    
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 2rem;
+    margin-bottom: -2rem;
+    border-radius: 2rem 2rem 0 0;
+}
+
+footer > p {
+    color: #d87fcc;
+    font-weight: 800;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
 }
 
 @media screen and (max-width: 1024px) {
