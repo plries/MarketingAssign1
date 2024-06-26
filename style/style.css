@@ -8,7 +8,11 @@ html {
 
 body {
     background-color: #1c1c1c;
-    font-size: 1.6rem;
+    p {
+        color: #b3b3b3;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
 }
 
 header {
@@ -55,13 +59,12 @@ li > a:hover {
 .intro {
     margin: 6rem 0 2rem 0;
     h2 {
+        font-size: 2.4rem;
         color: #dfdfdf;
         font-weight: 600;
-        margin: 0;
+        margin: 0 0 2rem 0;
     }
     p {
-        line-height: 2rem;
-        color: #b3b3b3;
         a {
             text-decoration: none;
             font-weight: 600;
@@ -73,13 +76,13 @@ li > a:hover {
 .conclusion {
     margin: 2rem 0 6rem 0;
     h2 {
+        font-size: 2.4rem;
         color: #dfdfdf;
         font-weight: 600;
-        margin: 0;
+        margin: 4rem 0 1rem 0;
     }
     p {
-        line-height: 2rem;
-        color: #b3b3b3;
+        margin: 0;
     }
 }
 
@@ -93,11 +96,6 @@ li > a:hover {
     text-wrap: nowrap;
     margin: 0;
     text-wrap: wrap;
-    }
-    h2 {
-        color: #dfdfdf;
-        font-weight: 600;
-        margin: 0;
     }
 }
 
@@ -115,7 +113,7 @@ li > a:hover {
     background-color: #222222;
     flex: 1;
     align-self: flex-end;
-    min-height: 650px;
+    min-height: 800px;
     transition: all 0.25s ease-out;
     img {
         transition: all 0.25s ease-out;
@@ -149,11 +147,9 @@ li > a:hover {
         margin: 0;
         color: #b3b3b3;
         font-weight: 400;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
     p {
-        font-size: 1.4rem;
-        line-height: 1.8rem;
         a {
             text-decoration: none;
             font-weight: 600;
@@ -243,7 +239,7 @@ footer {
 
     .card {
         width: 70vw;
-        min-height: 750px;
+        min-height: 950px;
         gap: 0;
         margin: 2rem 0;
     }
