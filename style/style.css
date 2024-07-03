@@ -45,6 +45,7 @@ li {
     list-style: none;
     width: fit-content;
     a {
+        font-size: 1.6rem;
         text-decoration: none;
         font-weight: 600;
         color: #1c1c1c;
@@ -212,6 +213,10 @@ footer {
         display: block;
         align-items: baseline;
         justify-content: baseline;
+    }
+    
+    ul {
+        gap: 2rem;
     }
     
     .intro {
